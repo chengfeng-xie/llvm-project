@@ -25,9 +25,6 @@
 #macOS specific
 .DS_Store
 
-# Ignore the user specified CMake presets in subproject directories.
-/*/CMakeUserPresets.json
-
 # Nested build directory
 /build*
 
@@ -72,8 +69,7 @@ AGENTS.md
 #==============================================================================#
 # Directories to ignore (do not add trailing '/'s, they skip symlinks).
 #==============================================================================#
-# VS2017 and VSCode config files.
-.vscode
+# VS2017 config files.
 .vs
 #zed config files
 .zed

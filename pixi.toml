@@ -1,0 +1,12 @@
+[workspace]
+channels = ["conda-forge"]
+platforms = ["win-64"]
+
+[dependencies]
+cmake = ">=4.4.3"
+clangxx = ">=22.1.8"
+lld = ">=23.1.0"
+ninja = ">=1.13.2"
+
+[target.win-64.dependencies]
+llvm-tools = ">=22.1.8"

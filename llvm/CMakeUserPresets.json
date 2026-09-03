@@ -1,0 +1,69 @@
+{
+  "$schema": "https://cmake.org/cmake/help/latest/_downloads/3e2d73bff478d88a7de0de736ba5e361/schema.json",
+  "buildPresets": [
+    {
+      "configurePreset": "ninja-pixi-debug",
+      "verbose": true,
+      "name": "ninja-pixi-debug"
+    }
+  ],
+  "configurePresets": [
+    {
+      "binaryDir": "../build",
+      "generator": "Ninja",
+      "hidden": true,
+      "name": "ninja"
+    },
+    {
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": {
+          "type": "STRING",
+          "value": "Debug"
+        }
+      },
+      "hidden": true,
+      "name": "debug"
+    },
+    {
+      "cacheVariables": {
+        "CMAKE_PREFIX_PATH": {
+          "type": "PATH",
+          "value": "${sourceDir}/../.pixi/envs/default/Library"
+        }
+      },
+      "hidden": true,
+      "name": "pixi"
+    },
+    {
+      "cacheVariables": {
+        "LLVM_ENABLE_PROJECTS": {
+          "type": "STRING",
+          "value": "lld"
+        },
+        "LLVM_ENABLE_ZSTD": {
+          "type": "STRING",
+          "value": "OFF"
+        },
+        "LLVM_USE_LINKER": {
+          "type": "STRING",
+          "value": "lld"
+        }
+      },
+      "hidden": true,
+      "inherits": [
+        "llvm-target-x86"
+      ],
+      "name": "llvm"
+    },
+    {
+      "inherits": [
+        "ninja",
+        "pixi",
+        "debug",
+        "llvm"
+      ],
+      "name": "ninja-pixi-debug"
+    }
+  ],
+  "version": 10
+}

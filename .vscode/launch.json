@@ -1,0 +1,16 @@
+{
+  "configurations": [
+    {
+      "args": [
+        "@bazel-out/x64_windows-dbg/bin/tensorflow/python/_pywrap_tensorflow_common.dll-2.params"
+      ],
+      "cwd": "C:/users/chengfeng-xie/_bazel_chengfeng-xie/mso7yc4w/execroot/org_tensorflow",
+      "name": "(Windows) Launch",
+      "program": "C:/Users/chengfeng-xie/home/code/llvm-project/build/bin/lld-link.exe",
+      "request": "launch",
+      "stopAtEntry": true,
+      "type": "cppvsdbg"
+    }
+  ],
+  "version": "0.2.0"
+}
