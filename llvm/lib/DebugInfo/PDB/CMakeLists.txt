@@ -146,3 +146,7 @@ add_llvm_component_library(LLVMDebugInfoPDB
   )
 
 target_link_libraries(LLVMDebugInfoPDB INTERFACE "${LIBPDB_ADDITIONAL_LIBRARIES}")
+
+target_compile_options(LLVMDebugInfoPDB PRIVATE
+  [[$<$<AND:$<CONFIG:Debug>,$<COMPILE_LANGUAGE:C,CXX>>:-fsanitize=implicit-integer-conversion>]]
+)

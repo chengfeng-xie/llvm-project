@@ -3,8 +3,8 @@
   "buildPresets": [
     {
       "configurePreset": "ninja-pixi-debug",
-      "verbose": true,
-      "name": "ninja-pixi-debug"
+      "name": "ninja-pixi-debug",
+      "verbose": true
     }
   ],
   "configurePresets": [
@@ -26,9 +26,9 @@
     },
     {
       "cacheVariables": {
-        "CMAKE_PREFIX_PATH": {
-          "type": "PATH",
-          "value": "${sourceDir}/../.pixi/envs/default/Library"
+        "CMAKE_TOOLCHAIN_FILE": {
+          "type": "FILEPATH",
+          "value": "${sourceDir}/cmake/pixi.cmake"
         }
       },
       "hidden": true,
@@ -41,7 +41,7 @@
           "value": "lld"
         },
         "LLVM_ENABLE_ZSTD": {
-          "type": "STRING",
+          "type": "BOOL",
           "value": "OFF"
         },
         "LLVM_USE_LINKER": {
